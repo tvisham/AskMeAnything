@@ -4,7 +4,6 @@ This repository is a small, hands-on example for students who want to learn how 
 
 Who this is for
 - Entry-level college students learning software design, testing, and responsible use of LLMs.
-- Instructors who want a compact example to teach routing, agent boundaries, and safe handling of API keys.
 
 What you’ll find
 - A Streamlit UI in `app.py` where you can pick agents, send questions, and see responses.
@@ -73,66 +72,7 @@ Where to look next
 - `ARCHITECTURE.md` — a short developer-focused overview and a diagram.
 - `tests/` — simple tests you can run and extend.
 
-Have fun learning — this is a playground, not production code.
-
-New Agents
-----------
-
-This release adds two helpful agents:
-
-- `SAT/ACT Agent` (`agents/sat_act_agent.py`): provides practice MCQs for math and reading, supports difficulty sampling, and can check pasted MCQ questions using the MathAgent's MCQ matcher. Example usage:
-
-```python
-from agents.sat_act_agent import SATACTAgent
-agent = SATACTAgent()
-print(agent.sample_practice('math'))
-# or check an MCQ:
-print(agent.handle('If 3x+5=20, what is x?\nA)3\nB)5\nC)10\nD)15'))
-```
-
-- `College Admission Agent` (`agents/college_admission_agent.py`): offers essay tips, short essay outlines for prompts, résumé/activity bullet suggestions, and a helper to rank extracurriculars by impact. Example usage:
-
-```python
-from agents.college_admission_agent import CollegeAdmissionAgent
-agent = CollegeAdmissionAgent()
-print(agent.essay_tips())
-print(agent.essay_outline('Describe a challenge you overcame'))
-print(agent.handle('sample messages'))
-```
-
-These agents are intentionally lightweight and rule-based so you can read and modify them quickly. If you want richer, personalized feedback (for essays, scoring, or detailed explanations), enable the LLM fallback by entering an API key in the app's sidebar.
- 
-Video Search / YouTube
-- To enable the Music Agent's YouTube search feature, install one of the supported packages. From your project directory run:
-
-```powershell
-python -m pip install youtube-search-python
-```
-
-- The project also supports the `youtube-search` package as a fallback. Both packages are already listed in `requirements.txt`. If you see a message in the app that says "Try: pip install ...", install the suggested package and restart the app.
-
-Azure Bing / Web Search Key
-- To use the app's Bing/Web Search provider you can provide an Azure/Bing Web Search key. Follow these steps:
-
-1. Create an Azure account (if you don't have one): https://azure.microsoft.com
-2. In the Azure Portal, create a resource for "Bing Search v7" or "Bing Web Search" under Cognitive Services (or use Azure Cognitive Services -> Search).
-3. After creating the resource, go to the resource's "Keys and Endpoint" page and copy one of the keys.
-
-Set the key for the app (PowerShell example, session-only):
-
-```powershell
-$env:BING_API_KEY = "<your-key-here>"
-# or
-$env:AZURE_BING_KEY = "<your-key-here>"
-```
-
-If you want the key to persist for your user account (Windows):
-
-```powershell
-[Environment]::SetEnvironmentVariable('BING_API_KEY', '<your-key-here>', 'User')
-```
-
-The web search utility will prefer SerpAPI (if configured), try Bing (if a key is set), then Perplexity and DuckDuckGo as fallbacks.
+Have fun learning — this is a playground for learning developing with Agents, not production code.
 
 # Agent Chatbot — Streamlit
 
