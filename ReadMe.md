@@ -138,6 +138,8 @@ Where to look next
 - `ARCHITECTURE.md` — a short developer-focused overview and a diagram.
 - `tests/` — simple tests you can run and extend.
 
-Have fun learning — this is a playground, not production code.
+Contributing
+Contributions are welcome to improve or add features .You can open a pull request or can contact via GitHub for any recommendation or an ask for new feature.
 
+Have fun learning — this is a playground for students to explore , not production code.
 ````
