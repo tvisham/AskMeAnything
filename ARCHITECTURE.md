@@ -27,24 +27,20 @@ Runtime flow (concise)
 3. The chosen agent processes the query locally. If the result is insufficient and an API key is available (and fallback is enabled), `AgentManager` requests the `LLM Agent` for a refined answer.
 4. Responses are appended to session state and rendered in the Streamlit UI; when web sources are used, provider metadata and source links are shown.
 
-Design notes (developer-focused)
+Design notes
 --------------------------------
 - Agents are intentionally small and focused: this keeps unit tests simple and makes it straightforward to replace or extend an agent.
 - Fallback to LLM is explicit and opt-in: keys can be provided in the sidebar for experimentation without risking accidental network calls.
-- Intent detection is conservative: when confidence is low the UI indicates that the system recommends using the LLM fallback rather than pretending to be certain.
 
 Security and privacy
 --------------------
 - Do not hard-code API keys. Use environment variables or enter a key in the Streamlit sidebar for short-lived testing.
-- Rule-based agents keep data local. Any data sent to an external LLM provider should be treated as potentially observable by that provider.
 
 Educational guidance
 --------------------
 - Use this repo as a starting point for lessons about modular agent design, safe LLM integration, and testing strategies.
 - Suggested exercises:
   - Add a new agent and write unit tests that verify its routing and output.
-  - Replace the intent router with a trained classifier and compare routing behavior.
-  - Swap the LLM provider or add multiple provider badges to observe fallbacks.
 
 Diagram
 -------
