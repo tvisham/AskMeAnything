@@ -1,0 +1,11 @@
+streamlit>=1.0
+sympy>=1.8
+pytest>=7.0
+openai>=0.27.0
+Pillow>=9.0
+youtube-search-python>=1.6.6
+youtube-search>=1.2.2
+requests>=2.28
+beautifulsoup4>=4.11
+azure-cognitiveservices-search-websearch>=1.0.0
+# Note: If you prefer the lightweight requests-based Bing call, an API key in BING_API_KEY or AZURE_BING_KEY is sufficient.

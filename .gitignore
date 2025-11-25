@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+
+# Streamlit cache and logs
+.streamlit/
+
+# Assets (images, generated diagrams) — ignore if you prefer not to commit
+assets/
+
+# Editor directories
+.vscode/
+.idea/
