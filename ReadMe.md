@@ -139,7 +139,7 @@ Where to look next
 - `tests/` — simple tests you can run and extend.
 
 Contributing
-Contributions are welcome to improve or add features .You can open a pull request or can contact via GitHub for any recommendation or an ask for new feature.
+- Contributions are welcome to improve or add features .
+- You can open a pull request or can contact via GitHub for any recommendation or an ask for new feature.
 
 Have fun learning — this is a playground for students to explore , not production code.
-````
