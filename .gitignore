@@ -15,6 +15,9 @@ env/
 # Streamlit cache and logs
 .streamlit/
 
+# Scripts folder (utility scripts, not needed in repo)
+scripts/
+
 # Assets (images, generated diagrams) — ignore if you prefer not to commit
 assets/
 
