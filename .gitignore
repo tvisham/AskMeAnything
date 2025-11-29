@@ -18,9 +18,6 @@ env/
 # Scripts folder (utility scripts, not needed in repo)
 scripts/
 
-# Assets (images, generated diagrams) — ignore if you prefer not to commit
-assets/
-
 # Editor directories
 .vscode/
 .idea/
