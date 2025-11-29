@@ -5,7 +5,13 @@ This repository is a small, hands-on example for students who want to learn how 
 Who this is for
 - Entry-level college students learning software design, testing, and responsible use of LLMs.
 
-What you’ll find
+## Architecture Overview
+
+![Agent Chatbot Architecture](assets/architecture.svg)
+
+![AskMeAnything Demo](assets/askmeanything.jpg)
+
+What you'll find
 - A Streamlit UI in `app.py` where you can pick agents, send questions, and see responses.
 - Focused agents in `agents/` (math, high-school topics, music & travel, AP-STEM).
 - An optional `LLM Agent` that calls an external provider only when you provide an API key.
