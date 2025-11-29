@@ -18,6 +18,11 @@ env/
 # Scripts folder (utility scripts, not needed in repo)
 scripts/
 
+# Assets folder (but keep only architecture.svg and askmeanything.jpg)
+assets/*
+!assets/architecture.svg
+!assets/askmeanything.jpg
+
 # Editor directories
 .vscode/
 .idea/
